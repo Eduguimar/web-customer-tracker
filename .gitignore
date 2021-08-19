@@ -1,0 +1,6 @@
+.settings/
+build/
+.classpath
+.project
+lib/
+spring-mvc-crud-demo-servlet.xml
