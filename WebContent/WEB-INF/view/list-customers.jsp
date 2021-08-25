@@ -4,6 +4,7 @@
 <html>
 <head>
 	<title>List Customers</title>
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
 <body>
 	<div id="wrapper">
@@ -18,7 +19,7 @@
 				<tr>
 					<th>First Name</th>
 					<th>Last Name</th>
-					<th>Email Name</th>
+					<th>Email</th>
 				</tr>
 				<c:forEach var="tempCustomer" items="${customers}">
 					<tr>
