@@ -7,21 +7,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.devedu.springdemo.dao.CustomerDAO;
 import com.devedu.springdemo.entity.Customer;
+import com.devedu.springdemo.service.CustomerService;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 	
-	//inject the customerDAO
+	//inject the customerService
 	@Autowired
-	private CustomerDAO dao;
+	private CustomerService service;
 	
 	@RequestMapping("/list")
 	public String listCustomers(Model model) {
-		//get customers from the dao
-		List<Customer> customers = dao.getCustomers();
+		//get customers from the service
+		List<Customer> customers = service.getCustomers();
 		//add the customers to the model
 		model.addAttribute("customers", customers);
 		
