@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.devedu.springdemo.entity.Customer;
 import com.devedu.springdemo.service.CustomerService;
@@ -31,6 +30,9 @@ public class CustomerController {
 	
 	@RequestMapping("/showFormForAdd")
 	public String addCustomer(Model theModel) {
+		
+		Customer customer = new Customer();
+		theModel.addAttribute("customer", customer);
 		
 		return "customer-form";
 	}
