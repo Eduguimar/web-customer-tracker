@@ -50,7 +50,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/showFormForUpdate")
-	public String showFormForUpdate(@RequestParam("customerId") int id, Model model) {
+	public String showFormForUpdate(@RequestParam("customerId") Long id, Model model) {
 		Customer customer = service.getCustomer(id);
 		model.addAttribute("customer", customer);
 		
